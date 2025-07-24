@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DevXpert</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    #splash {
+      position: fixed;
+      background: #1A73E8;
+      color: white;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      z-index: 50;
+    }
+    #main {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+<!-- Splash Screen -->
+<div id="splash">
+  <h1 class="text-4xl font-bold animate-pulse">DevXpert</h1>
+</div>
+
+<!-- Main Content -->
+<div id="main">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md px-6 py-4 flex justify-between items-center">
+    <img src="logo.png" alt="DevXpert Logo" class="h-10">
+    <ul class="flex space-x-6 text-blue-700 font-semibold">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="text-center py-12 bg-blue-600 text-white">
+    <h1 class="text-4xl font-bold">Building Web Presence that Delivers</h1>
+    <p class="mt-3 text-lg">DevXpert crafts clean, modern, and responsive websites that grow businesses.</p>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="py-10 px-6 max-w-5xl mx-auto">
+    <h2 class="text-2xl font-bold text-blue-700 mb-4">Who We Are</h2>
+    <p class="text-gray-700">
+      DevXpert is a team of passionate designers and developers focused on empowering local businesses through powerful online presence.
+      We blend creativity with coding to design and deliver websites that drive results.
+    </p>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="bg-gray-100 py-12 px-6">
+    <h2 class="text-2xl font-bold text-center text-blue-700 mb-6">Our Services</h2>
+    <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 max-w-6xl mx-auto">
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-lg font-bold">Starter Website</h3>
+        <p>Ideal for personal portfolios and local businesses (1 page).</p>
+        <p class="text-blue-600 font-semibold mt-2">₹3,000 – ₹5,000</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-lg font-bold">Business Website</h3>
+        <p>Perfect for service providers needing 3–5 pages.</p>
+        <p class="text-blue-600 font-semibold mt-2">₹6,000 – ₹10,000</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-lg font-bold">E-commerce Website</h3>
+        <p>Sell your products online with shopping cart & catalog.</p>
+        <p class="text-blue-600 font-semibold mt-2">₹12,000 – ₹18,000</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-lg font-bold">Booking/Portfolio Site</h3>
+        <p>Built for freelancers and professionals with contact or booking features.</p>
+        <p class="text-blue-600 font-semibold mt-2">₹5,000 – ₹8,000</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="py-10 px-6 max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold text-blue-700 mb-4">Get in Touch</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
+      <input type="text" name="name" placeholder="Your Name" class="w-full border p-3 rounded" required>
+      <input type="email" name="email" placeholder="Email Address" class="w-full border p-3 rounded" required>
+      <input type="text" name="whatsapp" placeholder="WhatsApp Number" class="w-full border p-3 rounded">
+      <select name="service" class="w-full border p-3 rounded">
+        <option value="Starter Website">Starter Website</option>
+        <option value="Business Website">Business Website</option>
+        <option value="E-commerce Website">E-commerce Website</option>
+        <option value="Portfolio Website">Portfolio Website</option>
+      </select>
+      <textarea name="message" rows="4" placeholder="Message or project idea..." class="w-full border p-3 rounded"></textarea>
+      <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Send</button>
+    </form>
+  </section>
+
+  <!-- WhatsApp Chat -->
+  <a href="https://wa.me/91xxxxxxxxxx" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white px-4 py-2 rounded-full shadow-lg">
+    Chat on WhatsApp
+  </a>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-sm text-gray-600">
+    &copy; 2025 DevXpert | All Rights Reserved
+  </footer>
+</div>
+
+<!-- JavaScript for Splash -->
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('splash').style.display = 'none';
+      document.getElementById('main').style.display = 'block';
+    }, 2000);
+  });
+</script>
+
+</body>
+</html>
